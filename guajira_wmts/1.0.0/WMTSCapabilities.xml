@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Capabilities version="1.0.0" xmlns="http://www.opengis.net/wmts/1.0" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wmts/1.0 http://schemas.opengis.net/wmts/1.0/wmtsGetCapabilities_response.xsd">
+  <ServiceMetadataURL xlink:href="http://saidsandoval.github.io/guajira_wmts/1.0.0/WMTSCapabilities.xml"/>
+  <ows:ServiceIdentification>
+    <ows:ServiceType>OGC WMTS</ows:ServiceType>
+    <ows:ServiceTypeVersion>1.0.0</ows:ServiceTypeVersion>
+    <ows:Title>Servicios OGC WMTS de La Guajira</ows:Title>
+    <ows:Abstract xml:lang="es">Servicio OGC WMTS de La Guajira</ows:Abstract>
+    <ows:Keywords>
+      <ows:Keyword>La Guajira</ows:Keyword>
+      <ows:Keyword>colombia</ows:Keyword>
+    </ows:Keywords>
+    <ows:Fees>Ninguno</ows:Fees>
+    <ows:AccessConstraints>No se permite la descarga masiva de datos</ows:AccessConstraints>
+  </ows:ServiceIdentification>
+  <ows:ServiceProvider>
+    <ows:ProviderName>Said Sandoval</ows:ProviderName>
+    <ows:ProviderSite xlink:href="http://localhost"/>
+  </ows:ServiceProvider>
+  <Contents>
+    <Layer>
+      <ows:Identifier>la_guajira</ows:Identifier>
+      <ows:Title>Mapa base de La Guajira</ows:Title>
+      <ows:Abstract>Mapa base de La Guajira a partir de datos OSM</ows:Abstract>
+      <ows:BoundingBox crs="urn:ogc:def:crs:EPSG:6.18.3:3857">
+        <ows:LowerCorner>-8225953.77217 1206147.52293</ows:LowerCorner>
+        <ows:UpperCorner>-7904463.08276 1428217.31936</ows:UpperCorner>
+      </ows:BoundingBox>
+      <ows:WGS84BoundingBox crs="urn:ogc:def:crs:OGC:2:84">
+        <ows:LowerCorner>-73.895 10.771</ows:LowerCorner>
+        <ows:UpperCorner>-71.007 12.724</ows:UpperCorner>
+      </ows:WGS84BoundingBox>
+      <Style isDefault="true">
+        <ows:Identifier>default</ows:Identifier>
+      </Style>
+      <Format>image/png</Format>
+      <TileMatrixSetLink>
+        <TileMatrixSet>z8to11</TileMatrixSet>
+      </TileMatrixSetLink>
+      <ResourceURL format="image/png" resourceType="tile" template="http://saidsandoval.github.io/guajira_wmts/la_guajira/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+    </Layer>
+    <TileMatrixSet>
+      <ows:Identifier>z8to11</ows:Identifier>
+      <ows:SupportedCRS>urn:ogc:def:crs:EPSG:6.18.3:3857</ows:SupportedCRS>
+      <TileMatrix>
+        <ows:Identifier>8</ows:Identifier>
+        <ScaleDenominator>2183915.093862178735</ScaleDenominator>
+        <TopLeftCorner>-20037508.34278924 20037508.34278924</TopLeftCorner>
+        <TileWidth>256</TileWidth>
+        <TileHeight>256</TileHeight>
+        <MatrixWidth>256</MatrixWidth>
+        <MatrixHeight>256</MatrixHeight>
+      </TileMatrix>
+      <TileMatrix>
+        <ows:Identifier>9</ows:Identifier>
+        <ScaleDenominator>1091957.546931089368</ScaleDenominator>
+        <TopLeftCorner>-20037508.34278924 20037508.34278924</TopLeftCorner>
+        <TileWidth>256</TileWidth>
+        <TileHeight>256</TileHeight>
+        <MatrixWidth>512</MatrixWidth>
+        <MatrixHeight>512</MatrixHeight>
+      </TileMatrix>
+      <TileMatrix>
+        <ows:Identifier>10</ows:Identifier>
+        <ScaleDenominator>545978.773465544684</ScaleDenominator>
+        <TopLeftCorner>-20037508.34278924 20037508.34278924</TopLeftCorner>
+        <TileWidth>256</TileWidth>
+        <TileHeight>256</TileHeight>
+        <MatrixWidth>1024</MatrixWidth>
+        <MatrixHeight>1024</MatrixHeight>
+      </TileMatrix>
+      <TileMatrix>
+        <ows:Identifier>11</ows:Identifier>
+        <ScaleDenominator>272989.386732772342</ScaleDenominator>
+        <TopLeftCorner>-20037508.34278924 20037508.34278924</TopLeftCorner>
+        <TileWidth>256</TileWidth>
+        <TileHeight>256</TileHeight>
+        <MatrixWidth>2048</MatrixWidth>
+        <MatrixHeight>2048</MatrixHeight>
+      </TileMatrix>
+    </TileMatrixSet>
+  </Contents>
+</Capabilities>
+
